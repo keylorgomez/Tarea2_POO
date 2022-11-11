@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.SaldoCuentaCorrienteController">
+   <children>
+      <AnchorPane layoutX="68.0" layoutY="30.0" prefHeight="334.0" prefWidth="458.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
+         <children>
+            <Label layoutX="133.0" layoutY="43.0" text="Saldo Cuenta Corriente">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="94.0" text="Cédula:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="60.0" layoutY="143.0" text="Número cuenta:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtIdentificacion" layoutX="156.0" layoutY="90.0" promptText="Identifcación cliente" />
+            <TextField fx:id="txtNumeroCuenta" layoutX="157.0" layoutY="139.0" promptText="# Cuenta Corriente" />
+            <Button fx:id="btnMostrarSaldo" layoutX="96.0" layoutY="219.0" mnemonicParsing="false" onAction="#MostrarSaldo" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Mostrar Saldo" />
+            <Button fx:id="btnRegresar" layoutX="273.0" layoutY="219.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

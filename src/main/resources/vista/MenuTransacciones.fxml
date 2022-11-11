@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.MenuTransaccionesController">
+   <children>
+      <AnchorPane layoutX="69.0" layoutY="38.0" prefHeight="311.0" prefWidth="457.0" style="-fx-background-color: d2d2d2; -fx-border-color: gray; -fx-border-radius: 7px;">
+         <children>
+            <Label layoutX="130.0" layoutY="24.0" text="Menu de Transacciones">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="64.0" prefHeight="18.0" prefWidth="387.0" text="Seleccione el tipo de cuenta sobre el que quiere realizar algún depósito o retiro!">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCorriente" layoutX="59.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaCorriente" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Corriente" />
+            <Button fx:id="btnAhorro" layoutX="202.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaAhorro" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Ahorro" />
+            <Button fx:id="btnAhorroProgramado" layoutX="303.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaAhorroProgramado" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Ahorro Programado" />
+            <Button fx:id="btnRegresar" layoutX="203.0" layoutY="215.0" mnemonicParsing="false" onAction="#Regresar" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Regresar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="511.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.CrearCuentaAhorroProgramadoController">
+   <children>
+      <AnchorPane layoutX="83.0" layoutY="46.0" prefHeight="414.0" prefWidth="580.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-radius: gray; -fx-border-radius: 7px;">
+         <children>
+            <Label layoutX="172.0" layoutY="40.0" prefHeight="27.0" prefWidth="249.0" text="Cuenta Ahorro Programado">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="190.0" layoutY="113.0" style="-fx-font-weight: bold;" text="Cédula:" />
+            <TextField fx:id="txtCedula" layoutX="244.0" layoutY="109.0" promptText="Número Cédula" />
+            <TextField fx:id="txtCuentaRelacionada" layoutX="245.0" layoutY="162.0" promptText="Cuenta Correinte Asociada" />
+            <Label layoutX="121.0" layoutY="166.0" style="-fx-font-weight: bold;" text="Cuenta Relacionada:" />
+            <TextField fx:id="txtMonto" layoutX="246.0" layoutY="224.0" promptText="Monto" />
+            <Label layoutX="46.0" layoutY="228.0" style="-fx-font-weight: bold;" text="Monto a depositar mensualmente:" />
+            <Button fx:id="btnCrearCuenta" layoutX="172.0" layoutY="305.0" mnemonicParsing="false" onAction="#CrearCuenta" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Crear Cuenta" />
+            <Button fx:id="btnRegresar" layoutX="362.0" layoutY="305.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="86.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
