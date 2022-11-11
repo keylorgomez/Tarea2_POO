@@ -5,18 +5,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.MenuTransaccionesController">
+<AnchorPane prefHeight="400.0" prefWidth="578.0" style="-fx-background-color: #B61919;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.MenuTransaccionesController">
    <children>
-      <AnchorPane layoutX="69.0" layoutY="38.0" prefHeight="311.0" prefWidth="457.0" style="-fx-background-color: d2d2d2; -fx-border-color: gray; -fx-border-radius: 7px;">
+      <AnchorPane layoutX="60.0" layoutY="44.0" prefHeight="311.0" prefWidth="457.0" style="-fx-background-color: d2d2d2; -fx-border-color: gray; -fx-border-radius: 7px;">
          <children>
             <Label layoutX="130.0" layoutY="24.0" text="Menu de Transacciones">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="35.0" layoutY="64.0" prefHeight="18.0" prefWidth="387.0" text="Seleccione el tipo de cuenta sobre el que quiere realizar algún depósito o retiro!">
+            <Label layoutX="25.0" layoutY="65.0" prefHeight="18.0" prefWidth="410.0" text="Seleccione el tipo de cuenta sobre la que quiera realizar un depósito o retiro!">
                <font>
-                  <Font name="System Italic" size="11.0" />
+                  <Font name="System Italic" size="12.0" />
                </font>
             </Label>
             <Button fx:id="btnCorriente" layoutX="59.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaCorriente" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Corriente" />

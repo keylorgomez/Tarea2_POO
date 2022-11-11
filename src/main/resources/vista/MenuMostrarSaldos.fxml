@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.MenuMostrarSaldosController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B61919;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.MenuMostrarSaldosController">
    <children>
       <AnchorPane layoutX="51.0" layoutY="40.0" prefHeight="310.0" prefWidth="499.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
          <children>

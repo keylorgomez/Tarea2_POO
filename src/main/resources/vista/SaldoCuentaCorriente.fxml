@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.SaldoCuentaCorrienteController">
+<AnchorPane prefHeight="400.0" prefWidth="573.0" style="-fx-background-color: #B61919;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.SaldoCuentaCorrienteController">
    <children>
-      <AnchorPane layoutX="68.0" layoutY="30.0" prefHeight="334.0" prefWidth="458.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
+      <AnchorPane layoutX="57.0" layoutY="33.0" prefHeight="334.0" prefWidth="458.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
          <children>
             <Label layoutX="133.0" layoutY="43.0" text="Saldo Cuenta Corriente">
                <font>
@@ -23,8 +23,8 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="txtIdentificacion" layoutX="156.0" layoutY="90.0" promptText="Identifcación cliente" />
-            <TextField fx:id="txtNumeroCuenta" layoutX="157.0" layoutY="139.0" promptText="# Cuenta Corriente" />
+            <TextField fx:id="txtIdentificacion" layoutX="156.0" layoutY="90.0" promptText="Identifcación cliente" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtNumeroCuenta" layoutX="157.0" layoutY="139.0" promptText="# Cuenta Corriente" style="-fx-alignment: center; -fx-font-weight: bold;" />
             <Button fx:id="btnMostrarSaldo" layoutX="96.0" layoutY="219.0" mnemonicParsing="false" onAction="#MostrarSaldo" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Mostrar Saldo" />
             <Button fx:id="btnRegresar" layoutX="273.0" layoutY="219.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
          </children>

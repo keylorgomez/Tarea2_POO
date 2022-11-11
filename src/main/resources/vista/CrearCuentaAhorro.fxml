@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="476.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.CrearCuentaAhorroController">
+<AnchorPane prefHeight="476.0" prefWidth="695.0" style="-fx-background-color: #B61919;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.CrearCuentaAhorroController">
    <children>
       <AnchorPane layoutX="68.0" layoutY="56.0" prefHeight="370.0" prefWidth="554.0" style="-fx-background-color: D2D2D2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
          <children>
@@ -15,15 +15,15 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtCedula" layoutX="203.0" layoutY="104.0" promptText="Número de cédula" />
-            <TextField fx:id="txtMonto" layoutX="204.0" layoutY="160.0" promptText="Monto a depositar" />
+            <TextField fx:id="txtCedula" layoutX="203.0" layoutY="104.0" promptText="Número de cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtMonto" layoutX="204.0" layoutY="160.0" promptText="Monto a depositar" style="-fx-font-weight: bold; -fx-alignment: center;" />
             <Label layoutX="138.0" layoutY="108.0" style="-fx-font-weight: bold;" text="Cédula:" />
             <Label layoutX="138.0" layoutY="164.0" style="-fx-font-weight: bold;" text="Monto:" />
             <Button fx:id="btnCrearCuenta" layoutX="150.0" layoutY="275.0" mnemonicParsing="false" onAction="#CrearCuenta" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Crear Cuenta" />
             <Button fx:id="btnRegresar" layoutX="305.0" layoutY="275.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
             <Label layoutX="106.0" layoutY="216.0" style="-fx-font-weight: bold;" text="Tasa de inteŕes:" />
-            <TextField fx:id="txtTasaInteres" layoutX="205.0" layoutY="212.0" promptText="Ejemplo: 2" />
-            <Label layoutX="364.0" layoutY="216.0" text="\%">
+            <TextField fx:id="txtTasaInteres" layoutX="205.0" layoutY="212.0" promptText="Ejemplo: 2" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <Label layoutX="373.0" layoutY="216.0" text="\%">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
