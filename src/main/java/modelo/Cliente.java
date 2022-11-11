@@ -2,6 +2,13 @@ package modelo;
 
 import java.util.ArrayList;
 import java.util.Objects;
+/**
+ * @author Keylor Gómez Rodríguez
+ * @version 1.0
+ * @since 10-11-2022
+ *
+ * En esta clase se gestionan todos los objetos cliente
+ */
 
 public class Cliente {
     private String nombre;
@@ -68,6 +75,16 @@ public class Cliente {
         this.cuentas = cuentas;
     }
 
+    /**
+     *
+     * @param nombre es de tipo string y corresponde al nombre del cliente
+     * @param identificacion es de tipo string y corresponde al número de cédula del cliente
+     * @param direccion es de tipo String y cooresponde a la dirección de habitación del cliente
+     * @param cuentas arraylist que almacena todas las cuentas del cliente
+     * @param cuentasCorrientes arraylist que almacena todas las cuentas corrientes del cliente
+     * @param cuentasAhorro arraylist que almacena todas las cuentas de ahorro del cliente
+     * @param cuentasAhorroProgramado arraylist que almacena todas las cuentas de ahorro programado del cliente
+     */
     public Cliente(String nombre, String identificacion, String direccion, ArrayList<Cuenta> cuentas, ArrayList<CuentaCorriente> cuentasCorrientes, ArrayList<CuentaAhorro> cuentasAhorro, ArrayList<CuentaAhorroProgramado> cuentasAhorroProgramado) {
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -92,6 +109,9 @@ public class Cliente {
         this.direccion = direccion;
     }
 
+    /**
+     * Constructor por defecto
+     */
     public Cliente(){
 
     }
@@ -104,6 +124,10 @@ public class Cliente {
         return Objects.equals(nombre, cliente.nombre) && Objects.equals(identificacion, cliente.identificacion) && Objects.equals(direccion, cliente.direccion) && Objects.equals(cuentas, cliente.cuentas) && Objects.equals(cuentasCorrientes, cliente.cuentasCorrientes) && Objects.equals(cuentasAhorro, cliente.cuentasAhorro) && Objects.equals(cuentasAhorroProgramado, cliente.cuentasAhorroProgramado);
     }
 
+    /**
+     *
+     * @return retorna el objeto en formato String
+     */
     @Override
     public String toString() {
         return "\nNombre: " + nombre + "\t" +
