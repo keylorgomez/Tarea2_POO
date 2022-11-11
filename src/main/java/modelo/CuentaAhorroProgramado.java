@@ -2,6 +2,9 @@ package modelo;
 
 import java.time.LocalDate;
 
+/**
+ * Clase que gestiona a las cuentas de ahorro programado
+ */
 public class CuentaAhorroProgramado extends Cuenta {
 
     public CuentaAhorroProgramado(String identificacion, String numeroCuenta, double saldo, LocalDate fechaCreacion, String cuentaCorrienteAsociada, double montoDepositar) {
@@ -30,7 +33,9 @@ public class CuentaAhorroProgramado extends Cuenta {
     }
 
 
-
+    /**
+     * Constructor por defecto
+     */
     public CuentaAhorroProgramado(){
 
     }
