@@ -57,10 +57,8 @@ public class Transaccion {
 
     @Override
     public String toString() {
-        return "Transaccion{" +
-                "fecha=" + fecha +
-                ", Descripcion='" + Descripcion + '\'' +
-                ", Monto=" + Monto +
-                '}';
+        return "Fecha: " + fecha +"\t"+
+                "Descripción: " + Descripcion + "\t" +
+                "Monto: " + Monto;
     }
 }
