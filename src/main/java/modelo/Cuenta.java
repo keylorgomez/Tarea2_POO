@@ -67,11 +67,9 @@ public class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" +
-                "identificacion='" + identificacion + '\'' +
-                ", numeroCuenta='" + numeroCuenta + '\'' +
-                ", saldo=" + saldo +
-                ", fechaCreacion=" + fechaCreacion +
-                '}';
+        return  "Identificacion: " + identificacion +"\t" +
+                "Número de cuenta: " + numeroCuenta + "\t"  +
+                "Saldo: " + saldo +"\t"  +
+                "Fecha de creacion: " + fechaCreacion;
     }
 }
