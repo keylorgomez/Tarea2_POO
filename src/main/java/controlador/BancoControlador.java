@@ -8,8 +8,6 @@ import java.util.Random;
 
 public class BancoControlador {
     public static ArrayList<Cliente> listaClientes=new ArrayList<>();
-    static ArrayList<String> listaCedulas=new ArrayList<>();
-    static ArrayList<String> listaCuentasGeneral=new ArrayList<>();
     static ArrayList<CuentaCorriente> listaCuentaCorriente=new ArrayList<>();
     static ArrayList<CuentaAhorro> listaCuentaAhorro=new ArrayList<>();
     static ArrayList<CuentaAhorroProgramado> listaCuentaAhorroProgramado=new ArrayList<>();
@@ -18,8 +16,8 @@ public class BancoControlador {
 
     public static boolean  RegistarCliente(String Nombre, String Identificacion, String Direccion){
         boolean validarCed=false;
-        for (int i=0;i<listaCedulas.size();i++){
-            if (Identificacion.equals(listaCedulas.get(i))){
+        for (int i=0;i<listaClientes.size();i++){
+            if (Identificacion.equals(listaClientes.get(i).getIdentificacion())){
                 validarCed=true;
                 break;
             }
@@ -27,7 +25,6 @@ public class BancoControlador {
         if(validarCed==false){
             Cliente cliente1 = new Cliente(Nombre,Identificacion,Direccion);
             listaClientes.add(cliente1);
-            listaCedulas.add(cliente1.getIdentificacion());
             return true;
         }else{
             return false;
@@ -48,8 +45,8 @@ public class BancoControlador {
 
     public static boolean CedulaExistente(String Identificacion){
         boolean validacion=false;
-        for (int i=0;i<listaCedulas.size();i++){
-            if (Identificacion.equals(listaCedulas.get(i))){
+        for (int i=0;i<listaClientes.size();i++){
+            if (Identificacion.equals(listaClientes.get(i).getIdentificacion())){
                 validacion=true;
                 break;
             }
@@ -115,6 +112,7 @@ public class BancoControlador {
         }
         return validar;
     }
+
     public static boolean VerificarCuentaAhorro(String identificacion, String cuentaCorriente){
         boolean validar=false;
         for(int contador=0;contador<listaCuentaAhorro.size();contador++){
@@ -125,6 +123,7 @@ public class BancoControlador {
         }
         return validar;
     }
+
     public static boolean VerificarCuentaAhorroProgramado(String identificacion, String cuentaCorriente){
         boolean validar=false;
         for(int contador=0;contador<listaCuentaAhorroProgramado.size();contador++){
@@ -135,7 +134,6 @@ public class BancoControlador {
         }
         return validar;
     }
-
 
     public static String MostrarSaldoCuentaCorriente(String identificacion, String numeroCuenta){
         double saldoCuenta=0;
@@ -162,7 +160,7 @@ public class BancoControlador {
         if (saldoCuenta>0){
             return "Su saldo es: ₡"+saldoCuenta+" colones";
         }else{
-            return "La cuenta de ahorro no posee fondos";
+            return "La cuenta de ahorro no posee fondos.";
         }
     }
     public static String MostrarSaldoCuentaAhorroProgramado(String identificacion, String numeroCuenta){
@@ -176,7 +174,7 @@ public class BancoControlador {
         if (saldoCuenta>0){
             return "Su saldo es: ₡"+saldoCuenta+" colones";
         }else{
-            return "La cuenta de ahorro no posee fondos";
+            return "La cuenta de ahorro programado no posee fondos.";
         }
     }
 
@@ -209,7 +207,7 @@ public class BancoControlador {
                 return "ERROR!\nNO se puede retirar más dinero del que se posee en la cuenta.";
             }
         }
-        return "El retiro se realizó con éxito.";
+        return "El retiro de dinero se realizó con éxito.";
     }
     public static String RealizarDepositoCuentaAhorro(String identificacion, String numeroCuenta, String Detalle, double Monto){
         LocalDate fechaTransaccion= LocalDate.now();
@@ -240,7 +238,7 @@ public class BancoControlador {
                 return "ERROR!\nNO se puede realizar el retiro del dinero.";
             }
         }
-        return "El retiro se realizó con éxito.";
+        return "El retiro de dinero se realizó con éxito.";
     }
 
     public static String RealizarRetiroCuentaAhorroProgramado(String identificacion, String numeroCuenta, String Detalle, double Monto){
@@ -257,13 +255,13 @@ public class BancoControlador {
                     listaTransacciones.add(transaccion);
                     break;
                 }else{
-                    return "Se pueden realizar retiros de dinero a partir del: "+fechaPermitidaRetiro;
+                    return "Los retiros de dinero en esta cuenta son permitidos a partir del: "+fechaPermitidaRetiro;
                 }
             }else{
                 return "No se pudo realizar el retiro del dinero.";
             }
         }
-        return "El retiro se realizó con éxito";
+        return "El retiro de dinero se realizó con éxito.";
     }
 
 }
