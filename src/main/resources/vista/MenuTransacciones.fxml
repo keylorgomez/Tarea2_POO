@@ -19,10 +19,10 @@
                   <Font name="System Italic" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="btnCorriente" layoutX="59.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaCorriente" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Corriente" />
-            <Button fx:id="btnAhorro" layoutX="202.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaAhorro" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Ahorro" />
-            <Button fx:id="btnAhorroProgramado" layoutX="303.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaAhorroProgramado" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Ahorro Programado" />
-            <Button fx:id="btnRegresar" layoutX="203.0" layoutY="215.0" mnemonicParsing="false" onAction="#Regresar" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Regresar" />
+            <Button fx:id="btnCorriente" focusTraversable="false" layoutX="59.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaCorriente" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Corriente" />
+            <Button fx:id="btnAhorro" focusTraversable="false" layoutX="202.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaAhorro" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Ahorro" />
+            <Button fx:id="btnAhorroProgramado" focusTraversable="false" layoutX="303.0" layoutY="143.0" mnemonicParsing="false" onAction="#IrCuentaAhorroProgramado" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Ahorro Programado" />
+            <Button fx:id="btnRegresar" focusTraversable="false" layoutX="197.0" layoutY="216.0" mnemonicParsing="false" onAction="#Regresar" style="-fx-font-weight: bold; -fx-border-radius: 5px; -fx-border-color: #000000;" text="Regresar" />
          </children>
       </AnchorPane>
    </children>

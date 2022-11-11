@@ -19,8 +19,8 @@
             <Label layoutX="81.0" layoutY="155.0" style="-fx-font-weight: bold;" text="Número cuenta:" />
             <Button fx:id="btnMostrarSaldo" layoutX="123.0" layoutY="225.0" mnemonicParsing="false" onAction="#MostrarSaldo" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Mostrar Saldo" />
             <Button fx:id="btnRegresar" layoutX="296.0" layoutY="225.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
-            <TextField fx:id="txtCedula" layoutX="185.0" layoutY="100.0" promptText="Número de identificación" style="-fx-alignment: center; -fx-font-weight: bold;" />
-            <TextField fx:id="txtNumeroCuenta" layoutX="186.0" layoutY="151.0" promptText="# Cuenta Ahorro" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtCedula" focusTraversable="false" layoutX="185.0" layoutY="100.0" promptText="Número de identificación" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtNumeroCuenta" focusTraversable="false" layoutX="186.0" layoutY="151.0" promptText="# Cuenta Ahorro" style="-fx-alignment: center; -fx-font-weight: bold;" />
          </children>
       </AnchorPane>
    </children>

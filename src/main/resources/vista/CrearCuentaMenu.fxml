@@ -19,10 +19,10 @@
                   <Font name="System Italic" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="btnCuentaCorriente" layoutX="55.0" layoutY="132.0" mnemonicParsing="false" onAction="#IrCuentaCorriente" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Cuenta Corriente" />
-            <Button fx:id="btnCuentaAhorro" layoutX="238.0" layoutY="132.0" mnemonicParsing="false" onAction="#IrCuentaAhorro" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Cuenta Ahorro" />
-            <Button fx:id="btnAhorroProgramado" layoutX="378.0" layoutY="132.0" mnemonicParsing="false" onAction="#IrCuentaAhorroProgramado" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Cuenta Ahorro Programado" />
-            <Button fx:id="btnRegresar" layoutX="255.0" layoutY="224.0" mnemonicParsing="false" onAction="#RegresarMenuPrincipal" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Regresar" />
+            <Button fx:id="btnCuentaCorriente" focusTraversable="false" layoutX="55.0" layoutY="132.0" mnemonicParsing="false" onAction="#IrCuentaCorriente" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Cuenta Corriente" />
+            <Button fx:id="btnCuentaAhorro" focusTraversable="false" layoutX="238.0" layoutY="132.0" mnemonicParsing="false" onAction="#IrCuentaAhorro" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Cuenta Ahorro" />
+            <Button fx:id="btnAhorroProgramado" focusTraversable="false" layoutX="378.0" layoutY="132.0" mnemonicParsing="false" onAction="#IrCuentaAhorroProgramado" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Cuenta Ahorro Programado" />
+            <Button fx:id="btnRegresar" focusTraversable="false" layoutX="255.0" layoutY="224.0" mnemonicParsing="false" onAction="#RegresarMenuPrincipal" style="-fx-font-weight: bold; -fx-border-style: solid; -fx-border-radius: 5px;" text="Regresar" />
          </children>
       </AnchorPane>
    </children>

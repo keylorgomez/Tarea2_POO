@@ -23,8 +23,8 @@
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <TextField fx:id="txtIdentificacion" layoutX="156.0" layoutY="90.0" promptText="Identifcación cliente" style="-fx-alignment: center; -fx-font-weight: bold;" />
-            <TextField fx:id="txtNumeroCuenta" layoutX="157.0" layoutY="139.0" promptText="# Cuenta Corriente" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtIdentificacion" focusTraversable="false" layoutX="156.0" layoutY="90.0" promptText="Identifcación cliente" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtNumeroCuenta" focusTraversable="false" layoutX="157.0" layoutY="139.0" promptText="# Cuenta Corriente" style="-fx-alignment: center; -fx-font-weight: bold;" />
             <Button fx:id="btnMostrarSaldo" layoutX="96.0" layoutY="219.0" mnemonicParsing="false" onAction="#MostrarSaldo" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Mostrar Saldo" />
             <Button fx:id="btnRegresar" layoutX="273.0" layoutY="219.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
          </children>

@@ -16,11 +16,11 @@
                </font>
             </Label>
             <Label layoutX="165.0" layoutY="114.0" style="-fx-font-weight: bold;" text="Cédula:" />
-            <TextField fx:id="txtCedula" layoutX="224.0" layoutY="110.0" prefWidth="170.0" promptText="Número Cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
-            <TextField fx:id="txtCuentaRelacionada" layoutX="225.0" layoutY="163.0" prefWidth="170.0" promptText="Cuenta Correinte Asociada" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtCedula" focusTraversable="false" layoutX="218.0" layoutY="105.0" prefWidth="170.0" promptText="Número Cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtCuentaRelacionada" focusTraversable="false" layoutX="219.0" layoutY="158.0" prefWidth="170.0" promptText="Cuenta Correinte Asociada" style="-fx-font-weight: bold; -fx-alignment: center;" />
             <Label layoutX="94.0" layoutY="167.0" style="-fx-font-weight: bold;" text="Cuenta Relacionada:" />
-            <TextField fx:id="txtMonto" layoutX="226.0" layoutY="225.0" prefWidth="170.0" promptText="Monto" style="-fx-font-weight: bold; -fx-alignment: center;" />
-            <Label layoutX="14.0" layoutY="229.0" style="-fx-font-weight: bold;" text="Monto a depositar mensualmente:" />
+            <TextField fx:id="txtMonto" focusTraversable="false" layoutX="220.0" layoutY="209.0" prefWidth="170.0" promptText="Monto" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <Label layoutX="14.0" layoutY="218.0" style="-fx-font-weight: bold;" text="Monto a depositar mensualmente:" />
             <Button fx:id="btnCrearCuenta" layoutX="172.0" layoutY="291.0" mnemonicParsing="false" onAction="#CrearCuenta" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Crear Cuenta" />
             <Button fx:id="btnRegresar" layoutX="335.0" layoutY="291.0" mnemonicParsing="false" onAction="#Regresar" prefHeight="26.0" prefWidth="86.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
          </children>
