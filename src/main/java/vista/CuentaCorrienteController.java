@@ -64,7 +64,7 @@ public class CuentaCorrienteController {
     }
 
     public boolean ValidarDatos(String pidentificacion,double pMonto){
-        if((pidentificacion==null || pidentificacion=="")){
+        if((pidentificacion==null || pidentificacion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");

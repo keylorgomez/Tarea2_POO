@@ -69,7 +69,7 @@ public class RegistrarClienteController {
     }
 
     public  boolean ValidarDatos( String pNombre, String pIdentificacion, String pDireccion){
-        if ((pNombre==null || pNombre =="")||(pIdentificacion==null || pIdentificacion=="") ||(pDireccion==null || pDireccion=="")){
+        if ((pNombre==null || pNombre.equals(""))||(pIdentificacion==null || pIdentificacion.equals("")) ||(pDireccion==null || pDireccion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");

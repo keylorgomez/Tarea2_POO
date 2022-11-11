@@ -46,11 +46,10 @@ public class SaldoCuentaCorrienteController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula o el número de cuenta corriente se ingresó de manera incorrecta.");
+                alert.setContentText("El número de cédula o el número de cuenta corriente fueron ingresados de manera incorrecta.");
                 alert.showAndWait();
             }
         }
-
     }
 
     @FXML
@@ -61,11 +60,11 @@ public class SaldoCuentaCorrienteController {
     }
 
     public boolean ValidarCampos(String identificacion, String numeroCuenta){
-        if((identificacion==null || identificacion=="")||(numeroCuenta==null || numeroCuenta=="")){
+        if((identificacion==null || identificacion.equals(""))||(numeroCuenta==null || numeroCuenta.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         }

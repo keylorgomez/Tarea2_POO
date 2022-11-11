@@ -70,7 +70,7 @@ public class CrearCuentaAhorroProgramadoController {
     }
     
     public boolean ValidarDatos(String identificacion,String CuentaCorriente, double MontoMensual){
-        if((identificacion==null || identificacion=="") || (CuentaCorriente==null || CuentaCorriente=="")){
+        if((identificacion==null || identificacion.equals("")) || (CuentaCorriente==null || CuentaCorriente.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");

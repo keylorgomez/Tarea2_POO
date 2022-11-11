@@ -71,7 +71,7 @@ public class CrearCuentaAhorroController {
     }
 
     public boolean ValidarDatos(String pidentificacion,double pMonto, double pTasaInteres){
-        if((pidentificacion==null || pidentificacion=="")){
+        if((pidentificacion==null || pidentificacion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");

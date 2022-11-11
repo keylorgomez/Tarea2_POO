@@ -61,7 +61,7 @@ public class SaldoAhorroProgramadoController {
     }
 
     public boolean ValidarCampos(String identificacion, String numeroCuenta){
-        if((identificacion==null || identificacion=="")||(numeroCuenta==null || numeroCuenta=="")){
+        if((identificacion==null || identificacion.equals(""))||(numeroCuenta==null || numeroCuenta.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");

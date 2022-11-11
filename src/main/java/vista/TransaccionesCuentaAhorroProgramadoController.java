@@ -65,18 +65,18 @@ public class TransaccionesCuentaAhorroProgramadoController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula o el número de cuenta de ahorro programado se ingresó de manera incorrecta.");
+                alert.setContentText("El número de cédula o el número de cuenta de ahorro programado fueron ingresados de manera incorrecta.");
                 alert.showAndWait();
             }
         }
 
     }
     public boolean ValidarCampos(String identificacion, String numeroCuenta, String Descripcion, double Monto){
-        if((identificacion==null || identificacion=="")||(numeroCuenta==null || numeroCuenta=="")||(Descripcion==null || Descripcion=="")){
+        if((identificacion==null || identificacion.equals(""))||(numeroCuenta==null || numeroCuenta.equals(""))||(Descripcion==null || Descripcion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         } else if (Monto<0) {
