@@ -2,6 +2,9 @@ package modelo;
 
 import java.time.LocalDate;
 
+/**
+ * Clase que gestiona a las cuentas de ahorro
+ */
 public class CuentaAhorro extends Cuenta{
 
     public CuentaAhorro(String identificacion, String numeroCuenta, double saldo, LocalDate fechaCreacion, double tasaInteres) {
@@ -19,6 +22,9 @@ public class CuentaAhorro extends Cuenta{
         CuentaAhorro.tasaInteres = tasaInteres;
     }
 
+    /**
+     * Constructor por defecto de la clase cuenta ahorro
+     */
     public CuentaAhorro(){
 
     }
