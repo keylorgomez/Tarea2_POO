@@ -38,7 +38,6 @@ public class CrearCuentaAhorroProgramadoController {
         cuentaAhorroProgramado.setIdentificacion(txtCedula.getText());
         cuentaAhorroProgramado.setNumeroCuenta(txtCuentaRelacionada.getText());
         cuentaAhorroProgramado.setMontoDepositar(Double.valueOf(txtMonto.getText()));
-
         String identificacion= cuentaAhorroProgramado.getIdentificacion();
         String cuentaRelacionada=cuentaAhorroProgramado.getNumeroCuenta();
         double montoDeposito=cuentaAhorroProgramado.getMontoDepositar();
@@ -49,7 +48,7 @@ public class CrearCuentaAhorroProgramadoController {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Éxito");
                 alert.setHeaderText(null);
-                alert.setContentText("La cuenta se creó correctamente\nSu número de cuenta de ahorro programado es: "+CuentaAhorroProgramado);
+                alert.setContentText("La cuenta se creó correctamente.\nSu número de cuenta de ahorro programado es: "+CuentaAhorroProgramado);
                 alert.initStyle(StageStyle.UTILITY);
                 alert.showAndWait();
                 LimpiarCampos();
@@ -57,7 +56,7 @@ public class CrearCuentaAhorroProgramadoController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cuenta no se encuentra asociado al cliente ingresado");
+                alert.setContentText("El número de cuenta corriente indicado no se encuentra asociado al número de cédula del cliente ingresado");
                 alert.showAndWait();
             }
         }
@@ -68,11 +67,10 @@ public class CrearCuentaAhorroProgramadoController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("CrearCuentaMenu.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
-
     }
     
     public boolean ValidarDatos(String identificacion,String CuentaCorriente, double MontoMensual){
-        if((identificacion==null || identificacion=="") || (CuentaCorriente==null || CuentaCorriente=="")){
+        if((identificacion==null || identificacion.equals("")) || (CuentaCorriente==null || CuentaCorriente.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
@@ -83,7 +81,7 @@ public class CrearCuentaAhorroProgramadoController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("El monto a depositar mensualmente debe ser mayor a ₡0");
+            alert.setContentText("El monto mensual a depositar debe ser mayor a ₡0");
             alert.showAndWait();
             return false;
         }

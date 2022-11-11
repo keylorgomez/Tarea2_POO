@@ -63,11 +63,10 @@ public class TransacionesCuentaAhorroController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula o el número de cuenta corriente se ingresó de manera incorrecta.");
+                alert.setContentText("El número de cédula o el número de cuenta corriente fueron ingresados de manera incorrecta.");
                 alert.showAndWait();
             }
         }
-
     }
 
     @FXML
@@ -75,7 +74,6 @@ public class TransacionesCuentaAhorroController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("MenuTransacciones.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
-
     }
 
     @FXML
@@ -100,19 +98,18 @@ public class TransacionesCuentaAhorroController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula o el número de cuenta de ahorro se ingresó de manera incorrecta.");
+                alert.setContentText("El número de cédula o el número de cuenta de ahorro fueron ingresados de manera incorrecta.");
                 alert.showAndWait();
             }
         }
-
     }
 
     public boolean ValidarCampos(String identificacion, String numeroCuenta, String Descripcion, double Monto){
-        if((identificacion==null || identificacion=="")||(numeroCuenta==null || numeroCuenta=="")||(Descripcion==null || Descripcion=="")){
+        if((identificacion==null || identificacion.equals(""))||(numeroCuenta==null || numeroCuenta.equals(""))||(Descripcion==null || Descripcion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         } else if (Monto<0) {
@@ -132,5 +129,4 @@ public class TransacionesCuentaAhorroController {
         txtDetalle.setText("");
         txtMonto.setText("");
     }
-
 }

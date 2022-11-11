@@ -39,17 +39,15 @@ public class RegistrarClienteController {
         cliente.setNombre(txtNombre.getText());
         cliente.setIdentificacion(txtCedula.getText());
         cliente.setDireccion(txtDireccion.getText());
-
         String NombreCliente= cliente.getNombre();
         String IdentificacionCliente=cliente.getIdentificacion();
         String DireccionCliente=cliente.getDireccion();
-
         if((ValidarDatos(NombreCliente,IdentificacionCliente,DireccionCliente))==true){
             if(BancoControlador.RegistarCliente(NombreCliente,IdentificacionCliente,DireccionCliente)==true){
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Éxito");
                 alert.setHeaderText(null);
-                alert.setContentText(NombreCliente+" se registró correctamente");
+                alert.setContentText(NombreCliente+" se registró en el sistema correctamente");
                 alert.initStyle(StageStyle.UTILITY);
                 alert.showAndWait();
                 LimpiarCampos();
@@ -57,13 +55,12 @@ public class RegistrarClienteController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("Ya se encuentra un cliente registrado bajo mismo número de cédula.");
+                alert.setContentText("Dentro del sistema ya se encuentra un cliente registrado bajo mismo número de cédula.");
                 alert.showAndWait();
             }
-
         }
-
     }
+
     @FXML
     void RegresarMenuPrincipal(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("MenuPrincipal.fxml")));
@@ -72,11 +69,11 @@ public class RegistrarClienteController {
     }
 
     public  boolean ValidarDatos( String pNombre, String pIdentificacion, String pDireccion){
-        if ((pNombre==null || pNombre =="")||(pIdentificacion==null || pIdentificacion=="") ||(pDireccion==null || pDireccion=="")){
+        if ((pNombre==null || pNombre.equals(""))||(pIdentificacion==null || pIdentificacion.equals("")) ||(pDireccion==null || pDireccion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         }
@@ -88,7 +85,5 @@ public class RegistrarClienteController {
         txtCedula.setText("");
         txtDireccion.setText("");
     }
-
-
 
 }

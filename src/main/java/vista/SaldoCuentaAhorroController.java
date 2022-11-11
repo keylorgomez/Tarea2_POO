@@ -47,11 +47,10 @@ public class SaldoCuentaAhorroController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula o el número de cuenta de ahorro se ingresó de manera incorrecta.");
+                alert.setContentText("El número de cédula o el número de cuenta de ahorro fueron ingresados de manera incorrecta.");
                 alert.showAndWait();
             }
         }
-
     }
 
     @FXML
@@ -59,7 +58,6 @@ public class SaldoCuentaAhorroController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("MenuMostrarSaldos.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
-
     }
 
     public boolean ValidarCampos(String identificacion, String numeroCuenta){
@@ -67,7 +65,7 @@ public class SaldoCuentaAhorroController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         }
@@ -77,5 +75,4 @@ public class SaldoCuentaAhorroController {
         txtCedula.setText("");
         txtNumeroCuenta.setText("");
     }
-
 }

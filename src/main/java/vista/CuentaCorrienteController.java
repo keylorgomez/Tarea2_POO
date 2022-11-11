@@ -34,7 +34,6 @@ public class CuentaCorrienteController {
     void CrearCuenta(ActionEvent event) {
         cuentaCorriente.setIdentificacion(txtCedula.getText());
         cuentaCorriente.setSaldo(Double.valueOf(txtMonto.getText()));
-
         String IdentificacionCliente=cuentaCorriente.getIdentificacion();
         Double SaldoCliente=cuentaCorriente.getSaldo();
         if(ValidarDatos(IdentificacionCliente,SaldoCliente)==true){
@@ -43,7 +42,7 @@ public class CuentaCorrienteController {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Éxito");
                 alert.setHeaderText(null);
-                alert.setContentText("La cuenta se creó correctamente\nSu número de cuenta corriente es: "+NumeroCuenta);
+                alert.setContentText("La cuenta se creó correctamente.\nSu número de cuenta corriente es: "+NumeroCuenta);
                 alert.initStyle(StageStyle.UTILITY);
                 alert.showAndWait();
                 LimpiarCampos();
@@ -51,11 +50,10 @@ public class CuentaCorrienteController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula ingresada no se encuentra registrado en el sistema.");
+                alert.setContentText("El número de cédula ingresado no se encuentra registrado en el sistema.");
                 alert.showAndWait();
             }
         }
-
     }
 
     @FXML
@@ -63,11 +61,10 @@ public class CuentaCorrienteController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("CrearCuentaMenu.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
-
     }
 
     public boolean ValidarDatos(String pidentificacion,double pMonto){
-        if((pidentificacion==null || pidentificacion=="")){
+        if((pidentificacion==null || pidentificacion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
@@ -78,7 +75,7 @@ public class CuentaCorrienteController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("El monto a depositar debe ser mayor a ₡50000");
+            alert.setContentText("El monto a depositar debe ser igual o superior a ₡50000");
             alert.showAndWait();
             return false;
         }

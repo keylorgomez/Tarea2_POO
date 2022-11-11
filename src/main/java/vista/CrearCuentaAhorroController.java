@@ -8,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -41,7 +40,6 @@ public class CrearCuentaAhorroController {
         cuentaAhorro.setIdentificacion(txtCedula.getText());
         cuentaAhorro.setSaldo(Double.valueOf(txtMonto.getText()));
         CuentaAhorro.setTasaInteres(Double.valueOf(txtTasaInteres.getText()));
-
         String identificacion=cuentaAhorro.getIdentificacion();
         double deposito=cuentaAhorro.getSaldo();
         double tasaInteres=CuentaAhorro.getTasaInteres();
@@ -51,7 +49,7 @@ public class CrearCuentaAhorroController {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Éxito");
                 alert.setHeaderText(null);
-                alert.setContentText("La cuenta de ahorra se creo correctamente\nSu número de cuenta corriente es: "+NumeroCuenta);
+                alert.setContentText("La cuenta de ahorra se creo correctamente.\nSu número de cuenta corriente es: "+NumeroCuenta);
                 alert.initStyle(StageStyle.UTILITY);
                 alert.showAndWait();
                 LimpiarCampos();
@@ -59,12 +57,10 @@ public class CrearCuentaAhorroController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula ingresada no se encuentra registrado en el sistema.");
+                alert.setContentText("El número de cédula ingresado aún no se encuentra registrado en el sistema.");
                 alert.showAndWait();
             }
-
         }
-
     }
 
     @FXML
@@ -72,22 +68,21 @@ public class CrearCuentaAhorroController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("CrearCuentaMenu.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
-
     }
 
     public boolean ValidarDatos(String pidentificacion,double pMonto, double pTasaInteres){
-        if((pidentificacion==null || pidentificacion=="")){
+        if((pidentificacion==null || pidentificacion.equals(""))){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         } else if (pMonto<0) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("No se pueden realizar depósitos negativos.");
+            alert.setContentText("No se permiten depósitos negativos.");
             alert.showAndWait();
             return false;
         } else if (pTasaInteres<=0) {
