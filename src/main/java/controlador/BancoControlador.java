@@ -6,6 +6,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Gestiona toda la clase Banco y cada uno de sus métodos
+ */
+
 public class BancoControlador {
     public static ArrayList<Cliente> listaClientes=new ArrayList<>();
     static ArrayList<CuentaCorriente> listaCuentaCorriente=new ArrayList<>();
@@ -13,7 +17,13 @@ public class BancoControlador {
     static ArrayList<CuentaAhorroProgramado> listaCuentaAhorroProgramado=new ArrayList<>();
     static ArrayList<Transaccion> listaTransacciones=new ArrayList<>();
 
-
+    /**
+     * Funcion que permite registrar clientes
+     * @param Nombre
+     * @param Identificacion
+     * @param Direccion
+     * @return
+     */
     public static boolean  RegistarCliente(String Nombre, String Identificacion, String Direccion){
         boolean validarCed=false;
         for (int i=0;i<listaClientes.size();i++){
@@ -31,6 +41,10 @@ public class BancoControlador {
         }
     }
 
+    /**
+     * Permite listar todos los clientes
+     * @return retorna la lista de clientes del sistema
+     */
     public static String clientesRegistrados(){
         String ListaTemp="";
         String listaClientesTemporal []= new String[listaClientes.size()];
@@ -58,6 +72,12 @@ public class BancoControlador {
         }
     }
 
+    /**
+     * Permite crear una nueva cuenta corriente
+     * @param Identificacion
+     * @param Monto
+     * @return
+     */
     public static String CrearCuentaCorriente(String Identificacion, double Monto){
         Random numeroAleatorio= new Random();
         int n=numeroAleatorio.nextInt(234567-126849)+126849;
@@ -68,6 +88,14 @@ public class BancoControlador {
         listaCuentaCorriente.add(cuentaCorriente);
         return numeroCuenta;
     }
+
+    /**
+     * Permite crear una nueva cuenta de ahorro
+     * @param Identificacion
+     * @param Monto
+     * @param tasaInteres
+     * @return
+     */
     public static String CrearCuentaAhorro(String Identificacion, double Monto, double tasaInteres){
         Random numeroAleatorio= new Random();
         int n=numeroAleatorio.nextInt(234567-126849)+126849;
@@ -80,6 +108,13 @@ public class BancoControlador {
         return numeroCuenta;
     }
 
+    /**
+     * Permite crear una nueva cuenta de ahorro programado
+     * @param identificacion
+     * @param cuentaCorriente
+     * @param MontoDeposito
+     * @return
+     */
     public static String CrearCuetaAhorroProgramado(String identificacion, String cuentaCorriente, double MontoDeposito){
         double SaldoCuenta=0;
         SaldoCuenta+=MontoDeposito;
@@ -135,6 +170,12 @@ public class BancoControlador {
         return validar;
     }
 
+    /**
+     * Permite mostrar el saldo de una cuenta corriente
+     * @param identificacion
+     * @param numeroCuenta
+     * @return
+     */
     public static String MostrarSaldoCuentaCorriente(String identificacion, String numeroCuenta){
         double saldoCuenta=0;
         for(int i=0;i<listaCuentaCorriente.size();i++){
@@ -149,6 +190,13 @@ public class BancoControlador {
             return "La cuenta corriente no posee fondos.";
         }
     }
+
+    /**
+     * Permite mostrar el saldo de una cuenta de ahorro
+     * @param identificacion
+     * @param numeroCuenta
+     * @return
+     */
     public static String MostrarSaldoCuentaAhorro(String identificacion, String numeroCuenta){
         double saldoCuenta=0;
         for(int i=0;i<listaCuentaAhorro.size();i++){
@@ -163,6 +211,13 @@ public class BancoControlador {
             return "La cuenta de ahorro no posee fondos.";
         }
     }
+
+    /**
+     * Permite mostrar el saldo de una cuenta de ahorro programado
+     * @param identificacion
+     * @param numeroCuenta
+     * @return
+     */
     public static String MostrarSaldoCuentaAhorroProgramado(String identificacion, String numeroCuenta){
         double saldoCuenta=0;
         for(int i=0;i<listaCuentaAhorroProgramado.size();i++){
@@ -178,6 +233,14 @@ public class BancoControlador {
         }
     }
 
+    /**
+     * Permite generar depositos en una cuenta corriente
+     * @param identificacion
+     * @param numeroCuenta
+     * @param Detalle
+     * @param Monto
+     * @return
+     */
     public static String RealizarDepositoCuentaCorriente(String identificacion, String numeroCuenta, String Detalle, double Monto){
         LocalDate fechaTransaccion= LocalDate.now();
         double nuevoSaldo=0;
@@ -193,6 +256,14 @@ public class BancoControlador {
         return "El depósito se realizó con éxito.";
     }
 
+    /**
+     * Permite generar retiros en una cuenta corriente
+     * @param identificacion
+     * @param numeroCuenta
+     * @param Detalle
+     * @param Monto
+     * @return
+     */
     public static String RealizarRetiroCuentaCorriente(String identificacion, String numeroCuenta, String Detalle, double Monto){
         LocalDate fechaTransaccion= LocalDate.now();
         double nuevoSaldo=0;
@@ -209,6 +280,15 @@ public class BancoControlador {
         }
         return "El retiro de dinero se realizó con éxito.";
     }
+
+    /**
+     * Permite generar depositos en una cuenta de ahorro
+     * @param identificacion
+     * @param numeroCuenta
+     * @param Detalle
+     * @param Monto
+     * @return
+     */
     public static String RealizarDepositoCuentaAhorro(String identificacion, String numeroCuenta, String Detalle, double Monto){
         LocalDate fechaTransaccion= LocalDate.now();
         double nuevoSaldo=0;
@@ -224,6 +304,14 @@ public class BancoControlador {
         return "El depósito se realizó con éxito.";
     }
 
+    /**
+     * Permite generar retiros en una cuenta de ahorro
+     * @param identificacion
+     * @param numeroCuenta
+     * @param Detalle
+     * @param Monto
+     * @return
+     */
     public static String RealizarRetiroCuentaAhorro(String identificacion, String numeroCuenta, String Detalle, double Monto){
         LocalDate fechaTransaccion= LocalDate.now();
         double nuevoSaldo=0;
@@ -241,6 +329,14 @@ public class BancoControlador {
         return "El retiro de dinero se realizó con éxito.";
     }
 
+    /**
+     * Permite generar retiros en una cuenta de ahorro programado
+     * @param identificacion
+     * @param numeroCuenta
+     * @param Detalle
+     * @param Monto
+     * @return
+     */
     public static String RealizarRetiroCuentaAhorroProgramado(String identificacion, String numeroCuenta, String Detalle, double Monto){
         LocalDate fechaTransaccion=LocalDate.now();
         LocalDate fechaPermitidaRetiro;
