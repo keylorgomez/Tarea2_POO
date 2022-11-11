@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.CrearCuentaMenuController">
+<AnchorPane prefHeight="400.0" prefWidth="655.0" style="-fx-background-color: #B61919;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.CrearCuentaMenuController">
    <children>
       <AnchorPane layoutX="38.0" layoutY="53.0" prefHeight="292.0" prefWidth="578.0" style="-fx-background-color: D2D2D2; -fx-border-style: SOLID; -fx-border-color: GRAY; -fx-border-radius: 7px;">
          <children>
-            <Label layoutX="230.0" layoutY="30.0" text="CREAR CUENTA">
+            <Label layoutX="222.0" layoutY="31.0" text="CREAR CUENTA">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Label layoutX="146.0" layoutY="70.0" text="Seleccione el tipo de cuenta que se desea crear!">

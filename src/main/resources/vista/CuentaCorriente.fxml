@@ -6,20 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="482.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.CuentaCorrienteController">
+<AnchorPane prefHeight="427.0" prefWidth="647.0" style="-fx-background-color: #B61919;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.CuentaCorrienteController">
    <children>
-      <AnchorPane layoutX="101.0" layoutY="74.0" prefHeight="330.0" prefWidth="531.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
+      <AnchorPane layoutX="58.0" layoutY="48.0" prefHeight="330.0" prefWidth="531.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
          <children>
             <Label layoutX="194.0" layoutY="34.0" text="Cuenta Corriente">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtCedula" layoutX="191.0" layoutY="98.0" promptText="Número de cédula" />
-            <TextField fx:id="txtMonto" layoutX="191.0" layoutY="153.0" promptText="Monto a depositar" />
-            <Label layoutX="119.0" layoutY="102.0" text="Cédula:" />
-            <Label layoutX="118.0" layoutY="157.0" text="Monto: " />
+            <TextField fx:id="txtCedula" layoutX="191.0" layoutY="98.0" promptText="Número de cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtMonto" layoutX="191.0" layoutY="153.0" promptText="Monto a depositar" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <Label layoutX="119.0" layoutY="102.0" style="-fx-font-weight: bold;" text="Cédula:" />
+            <Label layoutX="118.0" layoutY="157.0" style="-fx-font-weight: bold;" text="Monto: " />
             <Button fx:id="btnCrearCuenta" layoutX="143.0" layoutY="228.0" mnemonicParsing="false" onAction="#CrearCuenta" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Crear Cuenta" />
             <Button fx:id="btnRegresar" layoutX="293.0" layoutY="228.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
          </children>

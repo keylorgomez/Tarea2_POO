@@ -6,23 +6,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="563.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.ListarClientesController">
+<AnchorPane prefHeight="485.0" prefWidth="824.0" style="-fx-background-color: #B61919;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.ListarClientesController">
    <children>
-      <AnchorPane layoutX="50.0" layoutY="75.0" prefHeight="402.0" prefWidth="726.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
+      <AnchorPane layoutX="59.0" layoutY="41.0" prefHeight="402.0" prefWidth="711.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
          <children>
-            <Label layoutX="302.0" layoutY="26.0" text="Lista de Clientes">
+            <Label layoutX="295.0" layoutY="26.0" text="Lista de Clientes">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Button fx:id="btnRegresar" layoutX="424.0" layoutY="336.0" mnemonicParsing="false" onAction="#RegresarMenuPrincipal" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
             <Button fx:id="btnListar" layoutX="224.0" layoutY="336.0" mnemonicParsing="false" onAction="#ListarClientes" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Listar Clientes" />
-            <Label fx:id="labelClientes" layoutX="19.0" layoutY="105.0" text="Clientes:">
+            <Label fx:id="labelClientes" layoutX="48.0" layoutY="93.0" text="Clientes:">
                <font>
-                  <Font name="Georgia" size="13.0" />
+                  <Font name="Georgia Bold" size="13.0" />
                </font>
             </Label>
-            <TextArea fx:id="txtListaClientes" layoutX="81.0" layoutY="67.0" prefHeight="247.0" prefWidth="587.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 5px;" />
+            <TextArea fx:id="txtListaClientes" layoutX="126.0" layoutY="69.0" prefHeight="247.0" prefWidth="474.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 5px;" />
          </children>
       </AnchorPane>
    </children>
