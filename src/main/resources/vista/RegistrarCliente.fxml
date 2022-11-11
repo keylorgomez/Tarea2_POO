@@ -11,11 +11,11 @@
       <AnchorPane layoutX="65.0" layoutY="40.0" prefHeight="322.0" prefWidth="469.0" style="-fx-background-color: d2d2d2; -fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 7px;">
          <children>
             <Label layoutX="92.0" layoutY="67.0" style="-fx-font-weight: bold;" text="Nombre: " />
-            <TextField fx:id="txtNombre" layoutX="170.0" layoutY="63.0" prefWidth="160.0" promptText="Nombre y apellidos" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtNombre" focusTraversable="false" layoutX="155.0" layoutY="62.0" prefWidth="160.0" promptText="Nombre y apellidos" style="-fx-alignment: center; -fx-font-weight: bold;" />
             <Label layoutX="68.0" layoutY="120.0" style="-fx-font-weight: bold;" text="Identificación: " />
-            <TextField fx:id="txtCedula" layoutX="170.0" layoutY="116.0" prefWidth="160.0" promptText="Número de cédula" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtCedula" focusTraversable="false" layoutX="155.0" layoutY="115.0" prefWidth="160.0" promptText="Número de cédula" style="-fx-alignment: center; -fx-font-weight: bold;" />
             <Label layoutX="92.0" layoutY="175.0" style="-fx-font-weight: bold;" text="Dirección: " />
-            <TextField fx:id="txtDireccion" layoutX="170.0" layoutY="171.0" prefWidth="160.0" promptText="Dirección" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtDireccion" focusTraversable="false" layoutX="155.0" layoutY="170.0" prefWidth="160.0" promptText="Dirección" style="-fx-alignment: center; -fx-font-weight: bold;" />
             <Button fx:id="btnRegistrarCliente" layoutX="179.0" layoutY="225.0" mnemonicParsing="false" onAction="#RegistrarCliente" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Registrar Cliente" />
             <Label layoutX="164.0" layoutY="23.0" text="Registrar Cliente">
                <font>

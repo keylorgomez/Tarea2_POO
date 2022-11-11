@@ -15,14 +15,14 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtCedula" layoutX="203.0" layoutY="104.0" promptText="Número de cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
-            <TextField fx:id="txtMonto" layoutX="204.0" layoutY="160.0" promptText="Monto a depositar" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtCedula" focusTraversable="false" layoutX="203.0" layoutY="104.0" promptText="Número de cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtMonto" focusTraversable="false" layoutX="204.0" layoutY="160.0" promptText="Monto a depositar" style="-fx-font-weight: bold; -fx-alignment: center;" />
             <Label layoutX="138.0" layoutY="108.0" style="-fx-font-weight: bold;" text="Cédula:" />
             <Label layoutX="138.0" layoutY="164.0" style="-fx-font-weight: bold;" text="Monto:" />
             <Button fx:id="btnCrearCuenta" layoutX="150.0" layoutY="275.0" mnemonicParsing="false" onAction="#CrearCuenta" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Crear Cuenta" />
-            <Button fx:id="btnRegresar" layoutX="305.0" layoutY="275.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
+            <Button fx:id="btnRegresar" layoutX="314.0" layoutY="275.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />
             <Label layoutX="106.0" layoutY="216.0" style="-fx-font-weight: bold;" text="Tasa de inteŕes:" />
-            <TextField fx:id="txtTasaInteres" layoutX="205.0" layoutY="212.0" promptText="Ejemplo: 2" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtTasaInteres" focusTraversable="false" layoutX="205.0" layoutY="212.0" promptText="Ejemplo: 2" style="-fx-font-weight: bold; -fx-alignment: center;" />
             <Label layoutX="373.0" layoutY="216.0" text="\%">
                <font>
                   <Font name="System Bold" size="12.0" />

@@ -16,10 +16,10 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtCedula" layoutX="209.0" layoutY="87.0" prefWidth="160.0" promptText="Número de identificación" style="-fx-alignment: center; -fx-font-weight: bold;" />
-            <TextField fx:id="txtNumeroCuenta" layoutX="209.0" layoutY="129.0" prefWidth="160.0" promptText="# Cuenta de Ahorro" style="-fx-alignment: center; -fx-font-weight: bold;" />
-            <TextArea fx:id="txtDetalle" layoutX="209.0" layoutY="173.0" prefHeight="58.0" prefWidth="160.0" promptText="                Detalle" style="-fx-alignment: center; -fx-font-weight: bold;" />
-            <TextField fx:id="txtMonto" layoutX="210.0" layoutY="243.0" prefWidth="160.0" promptText="Monto" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtCedula" focusTraversable="false" layoutX="209.0" layoutY="87.0" prefWidth="160.0" promptText="Número de identificación" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtNumeroCuenta" focusTraversable="false" layoutX="209.0" layoutY="129.0" prefWidth="160.0" promptText="# Cuenta de Ahorro" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextArea fx:id="txtDetalle" focusTraversable="false" layoutX="209.0" layoutY="173.0" prefHeight="58.0" prefWidth="160.0" promptText="                Detalle" style="-fx-alignment: center; -fx-font-weight: bold;" />
+            <TextField fx:id="txtMonto" focusTraversable="false" layoutX="210.0" layoutY="243.0" prefWidth="160.0" promptText="Monto" style="-fx-alignment: center; -fx-font-weight: bold;" />
             <Button fx:id="btnDepositar" layoutX="138.0" layoutY="292.0" mnemonicParsing="false" onAction="#Depositar" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Depositar" />
             <Button fx:id="btnRetirar" layoutX="327.0" layoutY="292.0" mnemonicParsing="false" onAction="#Retirar" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Retirar" />
             <Button fx:id="btnRegresar" layoutX="234.0" layoutY="328.0" mnemonicParsing="false" onAction="#Regresar" prefWidth="100.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Regresar" />

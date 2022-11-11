@@ -15,8 +15,8 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtCedula" layoutX="191.0" layoutY="98.0" promptText="Número de cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
-            <TextField fx:id="txtMonto" layoutX="191.0" layoutY="153.0" promptText="Monto a depositar" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtCedula" focusTraversable="false" layoutX="191.0" layoutY="98.0" promptText="Número de cédula" style="-fx-font-weight: bold; -fx-alignment: center;" />
+            <TextField fx:id="txtMonto" focusTraversable="false" layoutX="191.0" layoutY="153.0" promptText="Monto a depositar" style="-fx-font-weight: bold; -fx-alignment: center;" />
             <Label layoutX="119.0" layoutY="102.0" style="-fx-font-weight: bold;" text="Cédula:" />
             <Label layoutX="118.0" layoutY="157.0" style="-fx-font-weight: bold;" text="Monto: " />
             <Button fx:id="btnCrearCuenta" layoutX="143.0" layoutY="228.0" mnemonicParsing="false" onAction="#CrearCuenta" prefWidth="95.0" style="-fx-font-weight: bold; -fx-border-color: #000000; -fx-border-radius: 5px;" text="Crear Cuenta" />
