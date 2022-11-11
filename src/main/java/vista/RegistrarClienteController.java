@@ -39,11 +39,9 @@ public class RegistrarClienteController {
         cliente.setNombre(txtNombre.getText());
         cliente.setIdentificacion(txtCedula.getText());
         cliente.setDireccion(txtDireccion.getText());
-
         String NombreCliente= cliente.getNombre();
         String IdentificacionCliente=cliente.getIdentificacion();
         String DireccionCliente=cliente.getDireccion();
-
         if((ValidarDatos(NombreCliente,IdentificacionCliente,DireccionCliente))==true){
             if(BancoControlador.RegistarCliente(NombreCliente,IdentificacionCliente,DireccionCliente)==true){
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
@@ -57,13 +55,12 @@ public class RegistrarClienteController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("Ya se encuentra un cliente registrado bajo mismo número de cédula.");
+                alert.setContentText("Dentro del sistema ya se encuentra un cliente registrado bajo mismo número de cédula.");
                 alert.showAndWait();
             }
-
         }
-
     }
+
     @FXML
     void RegresarMenuPrincipal(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("MenuPrincipal.fxml")));
@@ -76,7 +73,7 @@ public class RegistrarClienteController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         }
