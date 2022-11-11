@@ -63,7 +63,7 @@ public class TransaccionesCuentaCorrienteController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula o el número de cuenta corriente se ingresó de manera incorrecta.");
+                alert.setContentText("El número de cédula o el número de cuenta corriente fueron ingresados de manera incorrecta.");
                 alert.showAndWait();
             }
         }
@@ -92,11 +92,10 @@ public class TransaccionesCuentaCorrienteController {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("El número de cédula o el número de cuenta corriente se ingresó de manera incorrecta.");
+                alert.setContentText("El número de cédula o el número de cuenta corriente fueron ingresados de manera incorrecta.");
                 alert.showAndWait();
             }
         }
-
     }
 
     @FXML
@@ -104,7 +103,6 @@ public class TransaccionesCuentaCorrienteController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("MenuTransacciones.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
-
     }
 
     public boolean ValidarCampos(String identificacion, String numeroCuenta, String Descripcion, double Monto){
@@ -112,7 +110,7 @@ public class TransaccionesCuentaCorrienteController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
-            alert.setContentText("Todos los datos son requeridos");
+            alert.setContentText("Todos los datos son requeridos.");
             alert.showAndWait();
             return false;
         } else if (Monto<0) {
