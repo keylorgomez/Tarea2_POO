@@ -31,7 +31,6 @@ public class ListarClientesController {
     @FXML
     void ListarClientes(ActionEvent event) {
         txtListaClientes.setText(BancoControlador.clientesRegistrados());
-
     }
 
     @FXML
@@ -39,7 +38,6 @@ public class ListarClientesController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("MenuPrincipal.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
-
     }
 
 }

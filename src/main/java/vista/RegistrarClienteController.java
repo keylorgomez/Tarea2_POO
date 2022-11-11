@@ -49,7 +49,7 @@ public class RegistrarClienteController {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Éxito");
                 alert.setHeaderText(null);
-                alert.setContentText(NombreCliente+" se registró correctamente");
+                alert.setContentText(NombreCliente+" se registró en el sistema correctamente");
                 alert.initStyle(StageStyle.UTILITY);
                 alert.showAndWait();
                 LimpiarCampos();
